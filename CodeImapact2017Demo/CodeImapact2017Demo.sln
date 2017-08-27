@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.8
+VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeImapact2017Demo.Android", "CodeImapact2017Demo\CodeImapact2017Demo.Android\CodeImapact2017Demo.Android.csproj", "{6433D789-395E-46EC-B0AC-CF70AEA90C11}"
 EndProject
@@ -10,6 +10,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeImpact2017Demo.Core", "CodeImpact2017Demo.Core\CodeImpact2017Demo.Core.csproj", "{F2CFA9A8-75C1-4D0E-84D9-AC912FAD6FCA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PowerPoint", "PowerPoint", "{7977B994-628B-4558-A301-5C78C3C80BEF}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Documents\Standard_Libraries_with_Xamarin.pptx = ..\..\..\..\Documents\Standard_Libraries_with_Xamarin.pptx
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

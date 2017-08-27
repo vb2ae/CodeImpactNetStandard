@@ -32,6 +32,7 @@ namespace Android.EFCore
                     db.Monkeys.Add(new Monkey { monkeyType = "Howler Monkey" });
                     db.Monkeys.Add(new Monkey { monkeyType = "Owl or Night Monkey" });
                     await db.SaveChangesAsync();
+                    
                 }
                 lst = db.Monkeys.ToList();
 

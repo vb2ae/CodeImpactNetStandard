@@ -40,7 +40,7 @@ namespace CodeImpact2017Demo.PageModels
 
             if (Device.RuntimePlatform == Device.Android)
             {
-                path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "codeimpact.db");
+                path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "codeimpact1.db");
             }
             else if (Device.RuntimePlatform == Device.iOS)
             {
@@ -52,21 +52,21 @@ namespace CodeImpact2017Demo.PageModels
             }
             List<Monkey> lst = null;
 
-            //using (var db = new MonkeyContext(path))
-            //{
-            //    await db.Database.EnsureCreatedAsync();
-            //    if (!db.Monkeys.Any())
-            //    {
-            //        db.Monkeys.Add(new Monkey { monkeyType = "Squirrel Monkey" });
-            //        db.Monkeys.Add(new Monkey { monkeyType = "Spider Monkey" });
-            //        db.Monkeys.Add(new Monkey { monkeyType = "Golden Lion Tamarin" });
-            //        db.Monkeys.Add(new Monkey { monkeyType = "Howler Monkey" });
-            //        db.Monkeys.Add(new Monkey { monkeyType = "Owl or Night Monkey" });
-            //        await db.SaveChangesAsync();
-            //    }
-            //    lst = db.Monkeys.ToList();
+            using (var db = new MonkeyContext(path))
+            {
+                await db.Database.EnsureCreatedAsync();
+                if (!db.Monkeys.Any())
+                {
+                    db.Monkeys.Add(new Monkey { monkeyType = "Squirrel Monkey" });
+                    db.Monkeys.Add(new Monkey { monkeyType = "Spider Monkey" });
+                    db.Monkeys.Add(new Monkey { monkeyType = "Golden Lion Tamarin" });
+                    db.Monkeys.Add(new Monkey { monkeyType = "Howler Monkey" });
+                    db.Monkeys.Add(new Monkey { monkeyType = "Owl or Night Monkey" });
+                    await db.SaveChangesAsync();
+                }
+                lst = db.Monkeys.ToList();
 
-            //}
+            }
 
         }
 

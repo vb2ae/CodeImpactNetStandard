@@ -5,6 +5,17 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Welcome to Xamarin Forms!" />
+            <ListView ItemsSource="{Binding Posts}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Label Text="{Binding Title}" />
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
